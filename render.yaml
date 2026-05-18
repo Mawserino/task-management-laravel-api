@@ -1,0 +1,35 @@
+services:
+  - type: web
+    name: task-management-laravel-api
+    runtime: image
+    repo: https://github.com/Mawserino/task-management-laravel-api
+    plan: free
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: false
+      - key: APP_URL
+        value: https://task-management-laravel-api.onrender.com
+      - key: APP_KEY
+        sync: false
+      - key: APP_NAME
+        value: "Task Management API"
+      - key: DB_CONNECTION
+        value: pgsql
+      - key: DB_HOST
+        sync: false
+      - key: DB_PORT
+        value: 5432
+      - key: DB_DATABASE
+        sync: false
+      - key: DB_USERNAME
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: JWT_TTL
+        value: 60
+      - key: NODE_SERVICE_URL
+        sync: false
