@@ -8,6 +8,7 @@ return [
     'allowed_origins' => [
         'https://task-management-react-e9ni.onrender.com',
         'https://task-management-frontend-9gehs6zug-mawserinos-projects.vercel.app',
+        'https://*.vercel.app',
         'http://localhost:3000',
     ],
     
