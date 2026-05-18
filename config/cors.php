@@ -1,18 +1,23 @@
 <?php
 
 return [
-    'paths' => ['api/*', 'sanctum/csrf-cookie', 'login', 'register', 'logout'],
+    'paths' => ['api/*', 'login', 'register', 'logout', 'sanctum/csrf-cookie'],
     
     'allowed_methods' => ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
     
     'allowed_origins' => [
+        'http://localhost:3000',
+        'http://localhost:8000',
         'https://task-management-react-e9ni.onrender.com',
         'https://task-management-frontend-9gehs6zug-mawserinos-projects.vercel.app',
         'https://*.vercel.app',
-        'http://localhost:3000',
+        'https://*.onrender.com',
     ],
     
-    'allowed_origins_patterns' => [],
+    'allowed_origins_patterns' => [
+        '/^https:\/\/.*\.vercel\.app$/',
+        '/^https:\/\/.*\.onrender\.com$/',
+    ],
     
     'allowed_headers' => [
         'Content-Type',
@@ -21,11 +26,15 @@ return [
         'Accept',
         'Origin',
         'X-CSRF-TOKEN',
+        'X-XSRF-TOKEN',
     ],
     
-    'exposed_headers' => [],
+    'exposed_headers' => [
+        'Authorization',
+        'X-Token',
+    ],
     
-    'max_age' => 0,
+    'max_age' => 86400, 
     
-    'supports_credentials' => false,
+    'supports_credentials' => true, 
 ];
