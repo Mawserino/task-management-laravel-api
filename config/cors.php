@@ -8,7 +8,7 @@ return [
     'allowed_origins' => [
         'http://localhost:3000',
         'http://localhost:8000',
-        'https://task-management-frontend-9gehs6zug-mawserinos-projects.vercel.app',
+        'https://task-management-frontend-seven-plum.vercel.app/',
         'https://*.vercel.app',
         'https://*.onrender.com',
     ],

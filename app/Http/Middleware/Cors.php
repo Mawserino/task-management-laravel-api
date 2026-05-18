@@ -10,8 +10,7 @@ class Cors
     public function handle(Request $request, Closure $next)
     {
         $allowedOrigins = [
-            'https://task-management-react-e9ni.onrender.com',
-            'https://task-management-frontend-9gehs6zug-mawserinos-projects.vercel.app',
+            'https://task-management-frontend-seven-plum.vercel.app/',
             'https://*.vercel.app',
             'http://localhost:3000',
         ];
